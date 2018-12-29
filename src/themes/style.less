@@ -1,0 +1,68 @@
+@import "./varible";
+
+body {
+  background-color: @ss-base-background-color;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid transparent;
+  background-color: #193D37;
+  border-radius: 51px;
+  &:active, &:hover {
+    background-color: #136C5E;
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+#app, .ss-app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ant-select-tree-checkbox-inner, .ant-checkbox-inner {
+  background-color: transparent;
+  border-color: #136C5E;
+}
+
+.ant-select-selection--multiple .ant-select-selection__choice {
+  background-color: transparent;
+}
+
+.ant-select-selection__clear {
+  background-color: transparent;
+  color: @ss-font-color;
+}
+
+.ant-calendar {
+  border: 1px solid #1A4343;
+}

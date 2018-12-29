@@ -1,0 +1,30 @@
+@import (reference) "../../themes/varible";
+@import (reference) "../../themes/style";
+
+.ss-login {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -175px;
+  &-container {
+    .flex-center;
+    flex-direction: column;
+    width: 350px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: @ss-background-color;
+    & > .ant-input-affix-wrapper {
+      margin-bottom: 20px;
+      height: 32px;
+    }
+    & > .ant-btn {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+}
+
+.in-qb {
+  margin-left: 0;
+}
