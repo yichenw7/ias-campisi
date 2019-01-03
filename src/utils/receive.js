@@ -52,7 +52,7 @@ function Diff(key, _this, nextProps) {
   const prop = _this.props[key];
   const nProp = nextProps[key];
   if (prop !== nProp) {
-    const {result, payload} = nProp || {};
+    const {data, payload} = nProp || {};
     if (nProp.status === 401) {
       history.replace({pathname: '/login', state: location});
     } else {
@@ -61,12 +61,12 @@ function Diff(key, _this, nextProps) {
       } else {
         if (nProp.success) {
           if (nProp.status === 200) {
-            this.result.success.push(result, payload);
+            this.result.success.push(data, payload);
           } else {
             this.result.error.push(nProp.message);
           }
         } else if (nProp.error) {
-          this.result.error.push(nProp.error, result, payload);
+          this.result.error.push(nProp.error, data, payload);
         }
       }
     }

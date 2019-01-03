@@ -5,15 +5,12 @@ export default [
     key: 'user.login',
     method: 'post',
     url: () => `${user}login`,
+    resultKey: 'data',
   },
   {
-    key: 'user.info',
-    method: 'get',
-    url: () => user,
+    key: 'user.logout',
+    method: 'post',
+    url: () => `${user}logout`,
+    resultKey: 'data',
   },
-  {
-    key: 'user.permission',
-    method: 'get',
-    url: () => `${user}permission`,
-  }
 ];

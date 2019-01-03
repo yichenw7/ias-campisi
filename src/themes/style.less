@@ -2,6 +2,10 @@
 
 body {
   background-color: @ss-base-background-color;
+  font-family: "Microsoft YaHei" !important;
+  font-size: 14px;
+  //background-color: #161819;
+  color: #ffebc8;
 }
 
 ::-webkit-scrollbar {
@@ -49,6 +53,22 @@ body {
   justify-content: flex-start;
 }
 
+.flex-center-around {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-center-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
 .ant-select-tree-checkbox-inner, .ant-checkbox-inner {
   background-color: transparent;
   border-color: #136C5E;
@@ -66,3 +86,120 @@ body {
 .ant-calendar {
   border: 1px solid #1A4343;
 }
+
+//ias
+button,
+select,
+html,
+textarea,
+input {
+  font-family: "Microsoft YaHei" !important;
+}
+
+/* <a> --- */
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+ul > li > a {
+  display: block;
+}
+/* --- <a> */
+
+/* <ul><li> --- */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  list-style: none;
+}
+/* --- <ul><li> */
+
+/* <hr> --- */
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+  border-top: 1px solid #5c5c5c;
+}
+/* --- <hr> */
+
+/* <button> --- */
+button {
+  color: #ffebc8;
+  background-color: #0d7b7b;
+  border: 0;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: #179595;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  background-color: #0d6060;
+}
+
+button:disabled {
+  background-color: #35393b;
+  cursor: not-allowed !important;
+}
+
+input:disabled {
+  cursor: not-allowed !important;
+}
+input,
+textarea {
+  color: #fff3dd;
+  background-color: #3b4145;
+  border: 1px solid #3b4145;
+  border-radius: 2px;
+  height: 24px;
+  padding: 0 5px;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid #697277;
+  background-color: #42494e;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #0d7b7b;
+  background-color: #161819;
+  outline: none;
+}
+
+input:disabled,
+textarea:disabled {
+  border: 1px solid #2b2e2f;
+  background-color: #2b2e2f;
+  cursor: not-allowed;
+}
+
+textarea {
+  min-height: 26px;
+  min-width: 300px;
+  max-height: 300px;
+}
+label {
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+
+

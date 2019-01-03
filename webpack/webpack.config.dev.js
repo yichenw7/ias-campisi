@@ -14,16 +14,16 @@ const config = {
     port: 3000,
     index: `index.${BUILD_ENV}.html`,
     hot: true,
-    https: true,
+    https: false,
     historyApiFallback: {
       index: 'index.dev.html',
     },
     proxy: {
       '/api': {
-        target: `http://ssefi-nodeserver.${BUILD_ENV}.sumscope.com:5100`,
-        // target: 'http://localhost:5001/',
+        // target: `http://ssefi-nodeserver.${BUILD_ENV}.sumscope.com:5100`,
+        target: 'http://192.168.1.212/',
         pathRewrite: {
-          '^/api/': '/api/'
+          '^/api/': '/api/campisi/'
         }
       },
       '/web-library': {

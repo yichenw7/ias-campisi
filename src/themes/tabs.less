@@ -1,0 +1,49 @@
+.tab-wrapper {
+  display: flex;
+  user-select: none;
+  li {
+    float: left;
+    background-color: #172422;
+    &:first-child {
+      border-radius: 2px 0 0 2px;
+    }
+    &:last-child {
+      border-radius: 0 2px 2px 0;
+    }
+  }
+  .tab-item {
+    display: inline-block;
+    padding: 2px 10px;
+    min-width: 90px;
+    color: #FFEBC8;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    &.active {
+      background-color: #FF9200;
+      color: #000000;
+      font-weight: 800;
+      &.ALL {
+        color: #000;
+      }
+      &.ICAP {
+        background-color: #b03030;
+      }
+      &.TP {
+        background-color: #2d5d96;
+      }
+      &.PATR {
+        background-color: #ce6500;
+      }
+      &.BGC {
+        background-color: #608e2d;
+      }
+      &.TJXT {
+        background-color: #62358a;
+      }
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

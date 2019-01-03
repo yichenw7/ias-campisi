@@ -4,12 +4,12 @@ import { message } from 'antd';
 export const onEffect = async (action, res) => {
   try {
     const body = await res.json();
-    action.status = body.status;
+    action.status = res.status;
     action.loading = false;
     if (action.url.startsWith('/api/')) {
       action.message = body.message;
-      action.success = body.status === 200;
-      action.result = body.content;
+      action.success = res.status === 200 && body.code === '0000';
+      action.result = body.data;
       return action;
     }
   } catch (err) {
@@ -24,7 +24,7 @@ export const onFetchOption = (option, item) => {
   if (item.key !== 'user.login') {
     if (UserCache.user) {
       option.headers = option.headers || {};
-      option.headers.userId = UserCache.user.userId;
+      option.headers.Authorization = UserCache.user.access_token;
     }
   }
   return option;

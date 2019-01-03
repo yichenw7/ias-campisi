@@ -40,7 +40,8 @@ class UserCache {
   login = (user) => {
     if (!user) return;
     const {username, password} = user || {};
-    Action.emit('user.login', {username, password, gatewayToken: true});
+    let qb_user_id = user.id;
+    Action.emit('user.login', {qb_user_id, username, password, gatewayToken: true});
   };
 
   auth = (no) => {
